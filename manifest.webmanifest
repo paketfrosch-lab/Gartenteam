@@ -1,0 +1,8 @@
+{
+  "name": "Gartenteam – Tierpark Germendorf",
+  "short_name": "Gartenteam",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3f5ed",
+  "theme_color": "#174f32"
+}
