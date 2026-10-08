@@ -173,7 +173,7 @@ async function addTask(){
    document.getElementById("title").value="";
    document.getElementById("note").value="";
    show("today");
- }catch(e){alert("Aufgabe konnte nicht gespeichert werden. "+e.message)}
+ }catch(e){alert("Fehler beim Speichern: " + e.message);}
 }
 function saveNote(kind,areaId,textId){
  let text=document.getElementById(textId).value.trim();if(!text){alert("Bitte eine Beschreibung eingeben.");return}
