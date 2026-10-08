@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#174f32">
-<title>Gartenteam – Tierpark Germendorf Online</title>>
+<title>Gartenteam – Tierpark Germendorf Online</title>
 <style>
 :root{--g:#174f32;--g2:#2f744c;--bg:#f3f5ed;--card:#fff;--muted:#687268;--line:#dde4d9;--accent:#e9f3e8}
 *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:#183023}
@@ -104,11 +104,8 @@ async function db(path, options={}){
 
 async function loadTasks(){
   try{
-    tasks=await db("aufgaben?select=*&order=created_at.desc")||[];
-  }catch(e){
-    console.error(e);
-    alert("Aufgaben konnten nicht geladen werden. "+e.message);
-  }
+    tasks=await db("aufgaben?select=*")||[];
+  }catch(e){console.error(e);alert("Aufgaben konnten nicht geladen werden. "+e.message)}
   renderTasks();
 }
 
@@ -126,54 +123,39 @@ document.getElementById("areaList").innerHTML=areas.map(a=>`<div class="area"><b
 
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
 
-function isDone(t){return t.status==="erledigt" || !!t.completed_at}
-
+function isDone(t){return t.erledigt===true}
+function taskId(t){return t.ID??t.id??t.Ausweis??t.Auswe}
 function renderTasks(){
  const el=document.getElementById("tasks");
- el.innerHTML=tasks.length?tasks.map(t=>`<div class="task ${isDone(t)?"done":""}"><input type="checkbox" ${isDone(t)?"checked":""} onchange="toggle(${t.id},this.checked)"><div><div class="tasktitle">${esc(t.title)}</div><div class="meta">📍 ${esc(t.area||"")} · 👤 ${esc(t.assigned_to||"")}</div>${t.description?`<div class="meta">${esc(t.description)}</div>`:""}${t.notes?`<div class="meta">${esc(t.notes)}</div>`:""}<span class="badge">${esc(t.priority||"normal")}</span></div></div>`).join(""):`<div class="card">Noch keine Aufgaben vorhanden.</div>`;
+ el.innerHTML=tasks.length?tasks.map(t=>{
+   const id=taskId(t), canToggle=id!==undefined;
+   return `<div class="task ${isDone(t)?"done":""}"><input type="checkbox" ${isDone(t)?"checked":""} ${canToggle?`onchange="toggle(${JSON.stringify(String(id)).replace(/"/g,'&quot;')},this.checked)"`:'disabled'}><div><div class="tasktitle">${esc(t.Titel||"")}</div><div class="meta">📍 Bereich-ID: ${esc(t.bereich_id??"nicht zugeordnet")} · 👤 Mitarbeiter-ID: ${esc(t["Mitarbeiter-ID"]??"nicht zugeordnet")}</div>${t.Beschreibung?`<div class="meta">${esc(t.Beschreibung)}</div>`:""}<span class="badge">${esc(t.Kunst||"Einmalig")}</span></div></div>`
+ }).join(""):`<div class="card">Noch keine Aufgaben vorhanden.</div>`;
  document.getElementById("counter").textContent=`${tasks.filter(isDone).length}/${tasks.length} erledigt`;
 }
-
 async function toggle(id,done){
-  try{
-    const patch={
-      status:done?"erledigt":"offen",
-      completed_at:done?new Date().toISOString():null
-    };
-    await db("aufgaben?id=eq."+encodeURIComponent(id),{
-      method:"PATCH",
-      headers:{"Prefer":"return=minimal"},
-      body:JSON.stringify(patch)
-    });
-    await loadTasks();
-  }catch(e){
-    alert("Änderung konnte nicht gespeichert werden. "+e.message);
-    await loadTasks();
-  }
-}
-
-async function addTask(){
- let title=document.getElementById("title").value.trim();
- if(!title){alert("Bitte eine Aufgabe eingeben.");return}
  try{
-   const row={
-     title,
-     description:document.getElementById("note").value.trim()||null,
-     area:document.getElementById("area").value||null,
-     assigned_to:document.getElementById("person").value||null,
-     status:"offen",
-     priority:"normal",
-     notes:document.getElementById("repeat").value||null
-   };
-   await db("aufgaben",{
-     method:"POST",
-     headers:{"Prefer":"return=minimal"},
-     body:JSON.stringify(row)
-   });
-   document.getElementById("title").value="";
-   document.getElementById("note").value="";
-   show("today");
- }catch(e){alert("Fehler beim Speichern: " + e.message);}
+  const idColumn=tasks.some(t=>Object.prototype.hasOwnProperty.call(t,"ID"))?"ID":tasks.some(t=>Object.prototype.hasOwnProperty.call(t,"id"))?"id":null;
+  if(!idColumn)throw new Error("ID-Spalte muss noch geprüft werden.");
+  await db("aufgaben?"+idColumn+"=eq."+encodeURIComponent(id),{method:"PATCH",headers:{"Prefer":"return=minimal"},body:JSON.stringify({erledigt:done,erledigt_am:done?new Date().toISOString():null})});
+  await loadTasks();
+ }catch(e){alert("Änderung konnte nicht gespeichert werden. "+e.message);await loadTasks()}
+}
+async function addTask(){
+ const title=document.getElementById("title").value.trim();
+ if(!title){alert("Bitte eine Aufgabe eingeben.");return}
+ const area=document.getElementById("area").value;
+ const person=document.getElementById("person").value;
+ const note=document.getElementById("note").value.trim();
+ // Ohne bestätigte Fremdschlüssel-IDs keine erfundenen Zuordnungen speichern.
+ const description=[note,"Bereich (noch nicht zugeordnet): "+area,"Mitarbeiter (noch nicht zugeordnet): "+person].filter(Boolean).join(" | ");
+ const row={Titel:title,Beschreibung:description,Kunst:document.getElementById("repeat").value,erledigt:false,Datum:new Date().toISOString().slice(0,10)};
+ try{
+  await db("aufgaben",{method:"POST",headers:{"Prefer":"return=minimal"},body:JSON.stringify(row)});
+  document.getElementById("title").value="";document.getElementById("note").value="";
+  alert("Aufgabe gespeichert. Bereich und Mitarbeiter stehen vorläufig in der Beschreibung, bis die IDs zugeordnet sind.");
+  show("today");
+ }catch(e){alert("Fehler beim Speichern: "+e.message)}
 }
 function saveNote(kind,areaId,textId){
  let text=document.getElementById(textId).value.trim();if(!text){alert("Bitte eine Beschreibung eingeben.");return}
