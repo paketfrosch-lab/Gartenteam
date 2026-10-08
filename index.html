@@ -84,7 +84,7 @@ const defaults=[
 {id:4,title:"Hecken und Bäume entfernen",area:"Hundeplatz / Strand",person:"Ferienarbeiter 2",repeat:"Wiederkehrend",note:"Nur erlaubte Handarbeiten",done:false}
 ];
 const SUPABASE_URL="https://bmtnqfslwthspcemthzz.supabase.co";
-const SUPABASE_KEY="";const SUPABASE_KEY="sb_publishable_A7D38leY7Gw_kxXp4tK61g_Gdt15MDK
+const SUPABASE_KEY="sb_publishable_A7D38leY7Gw_kxXp4tK61g_Gdt15MDK
 let tasks=[];
 
 async function db(path, options={}){
@@ -104,7 +104,7 @@ async function db(path, options={}){
 
 async function loadTasks(){
   try{
-    tasks=await db("Task?select=*&order=created_at.desc")||[];
+    tasks=await db("Aufgabe?select=*&order=created_at.desc")||[];
   }catch(e){
     console.error(e);
     alert("Aufgaben konnten nicht geladen werden. "+e.message);
@@ -165,7 +165,7 @@ async function addTask(){
      priority:"normal",
      notes:document.getElementById("repeat").value||null
    };
-   await db("Task",{
+   await db("Aufgabe",{
      method:"POST",
      headers:{"Prefer":"return=minimal"},
      body:JSON.stringify(row)
