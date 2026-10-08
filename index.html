@@ -140,7 +140,7 @@ async function toggle(id,done){
       status:done?"erledigt":"offen",
       completed_at:done?new Date().toISOString():null
     };
-    await db("Task?id=eq."+encodeURIComponent(id),{
+    await db("Aufgaben?id=eq."+encodeURIComponent(id),{
       method:"PATCH",
       headers:{"Prefer":"return=minimal"},
       body:JSON.stringify(patch)
