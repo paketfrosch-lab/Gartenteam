@@ -165,7 +165,7 @@ async function addTask(){
      priority:"normal",
      notes:document.getElementById("repeat").value||null
    };
-   await db("Aufgabe",{
+   await db("Aufgaben",{
      method:"POST",
      headers:{"Prefer":"return=minimal"},
      body:JSON.stringify(row)
