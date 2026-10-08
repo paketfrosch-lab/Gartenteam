@@ -104,7 +104,7 @@ async function db(path, options={}){
 
 async function loadTasks(){
   try{
-    tasks=await db("Aufgaben?select=*&order=created_at.desc")||[];
+    tasks=await db("aufgaben?select=*&order=created_at.desc")||[];
   }catch(e){
     console.error(e);
     alert("Aufgaben konnten nicht geladen werden. "+e.message);
@@ -140,7 +140,7 @@ async function toggle(id,done){
       status:done?"erledigt":"offen",
       completed_at:done?new Date().toISOString():null
     };
-    await db("Aufgaben?id=eq."+encodeURIComponent(id),{
+    await db("aufgaben?id=eq."+encodeURIComponent(id),{
       method:"PATCH",
       headers:{"Prefer":"return=minimal"},
       body:JSON.stringify(patch)
@@ -165,7 +165,7 @@ async function addTask(){
      priority:"normal",
      notes:document.getElementById("repeat").value||null
    };
-   await db("Aufgaben",{
+   await db("aufgaben",{
      method:"POST",
      headers:{"Prefer":"return=minimal"},
      body:JSON.stringify(row)
