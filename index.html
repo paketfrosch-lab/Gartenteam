@@ -26,14 +26,30 @@ nav div{width:min(720px,100%);display:grid;grid-template-columns:repeat(4,1fr);p
 nav button{border:0;background:none;padding:7px 2px;color:#53645a;font-size:11px}nav button i{display:block;font-style:normal;font-size:21px}
 .notice{background:#fff8dc;border:1px solid #eadba3;border-radius:13px;padding:11px;font-size:12px;color:#665923;margin-bottom:12px}
 .count{font-size:13px;color:var(--muted)}
+
+:root{--g:#176844;--g2:#2f895c;--bg:#eff3ee;--line:#dce5da;--accent:#e8f3dd}
+body{color:#173c2c;background:radial-gradient(ellipse at top right,#dcebcf 0,transparent 48%),var(--bg)}
+header{max-width:760px;margin:0 auto;padding:28px 24px 25px;background:linear-gradient(130deg,#102e23,#1b593b);box-shadow:0 12px 36px #123e2918;border-radius:0 0 30px 30px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;width:170px;height:170px;border:30px solid #b7de8630;border-radius:50%;right:-65px;top:-30px;pointer-events:none}
+.eyebrow{font-size:10px;letter-spacing:2.1px;color:#c1d7bc;font-weight:750;margin-bottom:12px}header h1{font-size:32px;letter-spacing:-1px}header p{font-size:13px;color:#dae8d6;margin-top:9px}.header-tag{display:inline-block;font-size:9px;letter-spacing:1.1px;border:1px solid #8aad8745;background:#ffffff0c;border-radius:30px;padding:7px 10px;margin-top:18px}
+.header-dot{display:inline-block;width:8px;height:8px;background:#bee88c;border-radius:50%;vertical-align:middle;margin-left:12px;box-shadow:0 0 0 5px #bee88c15}
+main{padding-top:22px;max-width:760px}.notice{background:#e2eed6;color:#31543b;border:0;font-weight:650;padding:10px 13px;font-size:11px}.intro h2{font-size:25px;letter-spacing:-.7px;margin:19px 0 4px}.intro p{font-size:13px;color:var(--muted);margin:0 0 20px}
+.grid{gap:13px}.card,button.tile{border-radius:22px;box-shadow:0 5px 20px #163b2510;border:1px solid #ffffff}
+button.tile{min-height:148px;padding:20px;transition:transform .15s,box-shadow .15s}button.tile:active{transform:scale(.97)}.tile b{font-size:18px;letter-spacing:-.3px;margin:14px 0 4px}.tile span{font-size:12px;line-height:1.45}.tile .icon{display:block;width:45px;height:45px;background:#edf4e5;border-radius:15px;font-size:25px;line-height:45px;text-align:center}.tile:first-child{background:#cce7ac;border-color:#cce7ac}.tile:first-child .icon{background:#ffffff75}
+.primary{background:#176844;padding:13px 17px;font-weight:700;box-shadow:0 4px 10px #17684420}.back{padding:11px 15px;color:#215b3c;font-weight:650}.topline b{font-size:19px;letter-spacing:-.4px}
+input[type=text],select,textarea{border-radius:14px;padding:13px;background:#fbfcf9;border-color:#dce5d7}input:focus,textarea:focus,select:focus{outline:3px solid #a6cc7b50;border-color:#719b55}label{margin-top:15px;font-size:13px}.card{padding:21px}.task{padding:18px;border-radius:20px;border-color:#fff;box-shadow:0 4px 14px #183b2410}.tasktitle{font-size:17px}.meta{line-height:1.65}.badge{margin-top:10px;font-weight:650}.task button{border:0;background:#edf3e6;border-radius:11px;padding:10px 12px;color:#245839;font-weight:650;font-size:12px}.task button:last-child{color:#a54336;background:#fff0ec}
+.area,.person{border:1px solid #fff;border-radius:18px;padding:17px;box-shadow:0 4px 14px #163b2510}.area{display:flex;align-items:center;justify-content:space-between;gap:12px}.area b{margin:5px 0}.area-icon{font-size:23px}.areas{margin-top:16px;gap:11px}.input-row{display:flex;gap:9px;align-items:stretch}.input-row input{min-width:0}.input-row button{white-space:nowrap;font-size:12px}.danger{color:#a54336;border:1px solid #f0d7ce;background:#fff0ec;border-radius:12px;padding:11px 13px;font-weight:650;font-size:12px}.status{color:#176844;font-size:13px;line-height:1.5;margin-top:8px}.status.error{color:#a54336}button:disabled{opacity:.5;cursor:wait}.small{line-height:1.5}
+nav{background:#fbfcf9f5;backdrop-filter:blur(16px);box-shadow:0 -4px 24px #14382408}nav button{font-size:11px;font-weight:650;color:#305541;padding:9px 2px}nav button i{font-size:23px;margin-bottom:3px}button:focus-visible{outline:3px solid #9cc76d;outline-offset:3px}
+@media(max-width:420px){header{padding:25px 20px}header h1{font-size:30px}.input-row{flex-direction:column}.input-row button{align-self:flex-start}.area{padding:14px}.topline{flex-wrap:wrap}.tile b{font-size:17px}}
+
 </style>
 </head>
 <body>
-<header><h1>🌿 Gartenteam</h1><p>Tierpark Germendorf · Teamleiter-Ansicht</p></header>
+<header><div class="eyebrow">TIERPARK GERMENDORF</div><h1>🌿 Gartenteam<span class="header-dot"></span></h1><p>Gemeinsam den Park gestalten.</p><div class="header-tag">TEAMLEITER · KEVIN</div></header>
 <main>
 <section id="home" class="section active">
-<div class="notice">V6 · Aufgabenverwaltung</div>
-<div class="grid">
+<div class="notice">V7 · Dein Team. Dein Park.</div>
+<div class="intro"><h2>Alles im Blick.</h2><p>Plane Aufgaben und halte dein Team auf Kurs.</p></div><div class="grid">
 <button class="tile" onclick="show('today')"><span class="icon">✅</span><b>Heute</b><span>Aufgaben ansehen & abhaken</span></button>
 <button class="tile" onclick="show('newtask')"><span class="icon">➕</span><b>Neue Aufgabe</b><span>Aufgabe verteilen</span></button>
 <button class="tile" onclick="show('team')"><span class="icon">👥</span><b>Team</b><span>Mitarbeiterübersicht</span></button>
@@ -57,7 +73,7 @@ nav button{border:0;background:none;padding:7px 2px;color:#53645a;font-size:11px
 
 <section id="edittask" class="section"><div class="topline"><button class="back" onclick="show('today')">← Zurück</button><b>Aufgabe bearbeiten</b></div><div class="card"><label>Aufgabe</label><input id="editTitle" type="text"><label>Bereich</label><select id="editArea"></select><label>Mitarbeiter</label><select id="editPerson"></select><label>Art</label><select id="editRepeat"><option>Einmalig</option><option>Wiederkehrend</option></select><label>Hinweis</label><textarea id="editNote"></textarea><br><button class="primary" onclick="saveEdit()">Änderungen speichern</button> <button onclick="show('today')">Abbrechen</button></div></section>
 <section id="team" class="section"><div class="topline"><button class="back" onclick="show('home')">← Zurück</button><b>Team</b></div><div id="people" class="people"></div></section>
-<section id="areas" class="section"><div class="topline"><button class="back" onclick="show('home')">← Zurück</button><b>Bereiche</b></div><div id="areaList" class="areas"></div></section>
+<section id="areas" class="section"><div class="topline"><button class="back" onclick="show('home')">← Zurück</button><b>Bereiche</b></div><div class="card area-form"><label for="newAreaName">Neuer Bereich</label><div class="input-row"><input id="newAreaName" type="text" maxlength="100" placeholder="z. B. Strand oder Blumeninseln"><button id="addAreaButton" class="primary" type="button" onclick="addArea()">＋ Hinzufügen</button></div><p class="small">Bereiche werden online gespeichert. Beim Löschen bleiben vorhandene Aufgaben erhalten.</p><div id="areaStatus" role="status" aria-live="polite"></div></div><div id="areaList" class="areas"></div></section>
 
 <section id="issue" class="section"><div class="topline"><button class="back" onclick="show('home')">← Zurück</button><b>Mangel melden</b></div><div class="card">
 <label>Bereich</label><select id="issueArea"></select><label>Beschreibung</label><textarea id="issueText" placeholder="Was ist aufgefallen?"></textarea>
@@ -77,7 +93,7 @@ nav button{border:0;background:none;padding:7px 2px;color:#53645a;font-size:11px
 
 <script>
 const people=["Kevin (Teamleiter)","Marie","Eileen","Klaus","Werner","Ferienarbeiter 1","Ferienarbeiter 2"];
-const areas=["Parkplatz","Kassenbereich","Spielplatz","Koiteich","Außenring vorne","Außenring hinten","Büro / Teich","Hundeplatz / Strand"];
+let areas=["Parkplatz","Kassenbereich","Spielplatz","Koiteich","Außenring vorne","Außenring hinten","Büro / Teich","Hundeplatz / Strand"];
 const defaults=[
 {id:1,title:"Toiletten kontrollieren",area:"Kassenbereich",person:"Kevin (Teamleiter)",repeat:"Wiederkehrend",note:"Kontrolle & Sauberkeit",done:false},
 {id:2,title:"Außenring kontrollieren",area:"Außenring vorne",person:"Marie",repeat:"Einmalig",note:"Pflegearbeiten prüfen",done:false},
@@ -88,6 +104,9 @@ const SUPABASE_URL="https://toddhsdirldwvygpjkea.supabase.co";
 const SUPABASE_KEY="sb_publishable_xLveefGHC3-NIVy4wtTbFg_gEpsljye";
 let tasks=[];
 let editingId=null;
+let areaRows=[];
+let areasReady=false;
+let areaBusy=false;
 
 async function db(path, options={}){
   const r=await fetch(SUPABASE_URL+"/rest/v1/"+path,{
@@ -116,13 +135,50 @@ function show(id){
   document.querySelectorAll(".section").forEach(x=>x.classList.remove("active"));
   document.getElementById(id).classList.add("active");
   if(id==="today") loadTasks();
+  if(id==="areas") loadAreas();
   scrollTo(0,0);
 }
 
-function fillSelect(id,arr){document.getElementById(id).innerHTML=arr.map(x=>`<option>${x}</option>`).join("")}
+function fillSelect(id,arr){const el=document.getElementById(id),previous=el.value;el.innerHTML=arr.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join("");if(arr.includes(previous))el.value=previous;}
 ["area","issueArea","matArea"].forEach(id=>fillSelect(id,areas));fillSelect("person",people);fillSelect("editArea",areas);fillSelect("editPerson",people);
 document.getElementById("people").innerHTML=people.map((p,i)=>`<div class="person"><b>${i===0?"🌿":"👤"} ${p}</b><span class="small">${i===0?"Kann alle Aufgaben verwalten":"Mitarbeiter"}</span></div>`).join("");
-document.getElementById("areaList").innerHTML=areas.map(a=>`<div class="area"><b>📍 ${a}</b><span class="small">Aufgaben können diesem Bereich zugeordnet werden.</span></div>`).join("");
+renderAreas();
+
+
+function areaMessage(text,error=false){const el=document.getElementById("areaStatus");el.textContent=text;el.className=error?"status error":"status";}
+function renderAreas(){
+ const el=document.getElementById("areaList");
+ if(!areasReady){el.innerHTML='<div class="card small">Bereiche werden geladen …</div>';return;}
+ el.innerHTML=areaRows.length?areaRows.map(a=>`<div class="area"><div><span class="area-icon">🌳</span><b>${esc(a.name)}</b><span class="small">Für neue Aufgaben verfügbar</span></div><button class="danger" type="button" ${areaBusy?'disabled':''} onclick="removeArea(${Number(a.id)})" aria-label="${esc(a.name)} löschen">Löschen</button></div>`).join(""):'<div class="card">Noch keine Bereiche. Lege oben deinen ersten Bereich an.</div>';
+}
+async function loadAreas(){
+ try{const rows=await db("bereiche?select=id,name,aktiv&order=id.asc");if(!Array.isArray(rows))throw new Error("Ungültige Antwort beim Laden der Bereiche.");areaRows=rows.filter(a=>a.aktiv!==false);areas=areaRows.map(a=>a.name);areasReady=true;["area","issueArea","matArea","editArea"].forEach(id=>fillSelect(id,areas));renderAreas();return true;}
+ catch(e){areaMessage("Bereiche konnten nicht geladen werden: "+e.message,true);document.getElementById("areaList").innerHTML='<div class="card">Bereiche sind momentan nicht erreichbar. <button type="button" class="back" onclick="loadAreas()">Erneut versuchen</button></div>';return false;}
+}
+async function addArea(){
+ if(areaBusy)return;
+ const input=document.getElementById("newAreaName"),name=input.value.trim();
+ if(!name){areaMessage("Bitte einen Namen eingeben.",true);return;}
+ if(!areasReady&&!(await loadAreas()))return;
+ if(areaRows.some(a=>a.name.toLocaleLowerCase('de-DE')===name.toLocaleLowerCase('de-DE'))){areaMessage("Diesen Bereich gibt es bereits.",true);return;}
+ areaBusy=true;document.getElementById("addAreaButton").disabled=true;renderAreas();
+ try{
+ const matches=await db("bereiche?select=id,name,aktiv&name=eq."+encodeURIComponent(name));
+ const result=matches.length?await db("bereiche?id=eq."+encodeURIComponent(matches[0].id),{method:"PATCH",headers:{Prefer:"return=representation"},body:JSON.stringify({aktiv:true})}):await db("bereiche",{method:"POST",headers:{Prefer:"return=representation"},body:JSON.stringify({name,aktiv:true})});
+ if(!Array.isArray(result)||result.length!==1)throw new Error("Der Bereich wurde nicht gespeichert. Bitte Datenbankrechte prüfen.");
+ input.value="";await loadAreas();areaMessage("„"+name+"“ wurde hinzugefügt.");
+ }catch(e){areaMessage("Hinzufügen fehlgeschlagen: "+e.message,true);}
+ finally{areaBusy=false;document.getElementById("addAreaButton").disabled=false;renderAreas();}
+}
+async function removeArea(id){
+ if(areaBusy)return;const a=areaRows.find(x=>Number(x.id)===id);if(!a)return;
+ if(!confirm("Bereich „"+a.name+"“ aus der Auswahl löschen? Vorhandene Aufgaben bleiben erhalten."))return;
+ areaBusy=true;renderAreas();
+ try{const changed=await db("bereiche?id=eq."+encodeURIComponent(a.id),{method:"PATCH",headers:{Prefer:"return=representation"},body:JSON.stringify({aktiv:false})});if(!Array.isArray(changed)||changed.length!==1)throw new Error("Der Bereich wurde nicht entfernt. Bitte Datenbankrechte prüfen.");await loadAreas();areaMessage("„"+a.name+"“ wurde aus der Auswahl gelöscht.");}
+ catch(e){areaMessage("Löschen fehlgeschlagen: "+e.message,true);}
+ finally{areaBusy=false;renderAreas();}
+}
+function selectExistingArea(value){const el=document.getElementById("editArea");if(value&&!areas.includes(value))el.add(new Option(value,value));el.value=value;}
 
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
 
@@ -151,7 +207,7 @@ function openEditByIndex(i){
  editingId=String(id);
  const d=parseDescription(t);
  document.getElementById("editTitle").value=t.titel||"";
- document.getElementById("editArea").value=d.area;
+ selectExistingArea(d.area);
  document.getElementById("editPerson").value=d.person;
  document.getElementById("editRepeat").value=t.art||"Einmalig";
  document.getElementById("editNote").value=d.note;
@@ -182,6 +238,8 @@ async function toggle(i,done){
  }catch(e){alert("Änderung konnte nicht gespeichert werden. "+e.message);await loadTasks()}
 }
 async function addTask(){
+ if(!areasReady&&!(await loadAreas())){alert("Bereiche konnten nicht geladen werden.");return;}
+ if(!areas.length){alert("Bitte zuerst unter Bereiche einen Bereich hinzufügen.");show("areas");return;}
  const title=document.getElementById("title").value.trim();
  if(!title){alert("Bitte eine Aufgabe eingeben.");return}
  const area=document.getElementById("area").value;
@@ -202,6 +260,7 @@ function saveNote(kind,areaId,textId){
  let notes=JSON.parse(localStorage.getItem("gt_notes")||"[]");notes.unshift({kind,area:document.getElementById(areaId).value,text,date:new Date().toLocaleString("de-DE")});localStorage.setItem("gt_notes",JSON.stringify(notes));document.getElementById(textId).value="";alert(kind+" wurde nur auf diesem Gerät gespeichert (nicht online synchronisiert).");
 }
 loadTasks();
+loadAreas();
 </script>
 <script>
 // Kein Service-Worker-Cache in dieser Testversion, damit Änderungen sichtbar werden.
