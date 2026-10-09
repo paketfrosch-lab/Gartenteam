@@ -1,8 +1,26 @@
 {
-  "name": "Gartenteam – Tierpark Germendorf",
+  "id": "/",
+  "name": "Gartenteam · Tierpark Germendorf",
   "short_name": "Gartenteam",
-  "start_url": "./index.html",
+  "description": "Aufgaben und Bereichsbesuche für das Gartenteam im Tierpark Germendorf.",
+  "lang": "de",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#f3f5ed",
-  "theme_color": "#174f32"
+  "background_color": "#eff3ee",
+  "theme_color": "#174f32",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
