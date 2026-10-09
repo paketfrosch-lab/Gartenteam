@@ -44,20 +44,25 @@ nav{background:#fbfcf9f5;backdrop-filter:blur(16px);box-shadow:0 -4px 24px #1438
 
 
 .brand{display:flex;align-items:center;gap:16px;position:relative;z-index:1}.park-logo{width:72px;height:78px;object-fit:contain;border-radius:13px;flex-shrink:0;box-shadow:0 4px 14px #00000020}.brand-text{min-width:0}.brand h1{font-size:30px}.brand p{line-height:1.5}.brand .header-dot{margin-left:10px}@media(max-width:420px){.brand{gap:13px}.brand h1{font-size:27px}.brand p{font-size:12px}.park-logo{width:66px;height:72px}}
+
+[hidden]{display:none!important}.session-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;font-weight:700;margin-bottom:12px}.text-button{border:0;background:transparent;color:#27633f;font:inherit;font-size:12px;padding:12px 4px;text-decoration:underline}.auth-tabs{display:flex;gap:8px;margin-bottom:16px}input[type=email],input[type=password]{width:100%;font:inherit;border:1px solid #dce5d7;border-radius:14px;padding:13px;background:#fbfcf9}#authSubmit{margin-top:20px;width:100%}#pendingMain h2,#resetMain h2{font-size:23px}.approval{margin:14px 0;padding:17px;border:1px solid #ccdcbf;border-radius:18px;background:#f8fbf4}.approval select{margin:12px 0}.approval p{overflow-wrap:anywhere;font-size:13px}.employee-view .manager-only{display:none!important}.employee-view nav div{grid-template-columns:1fr 1fr}.employee-view .grid{grid-template-columns:1fr}.employee-view .tile{min-height:160px}
 </style>
 </head>
 <body>
 <header><div class="eyebrow">TIERPARK GERMENDORF</div><div class="brand"><img class="park-logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAASwAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAAwICAgICAwICAwUDAwMFBQQDAwQFBgUFBQUFBggGBwcHBwYICAkKCgoJCAwMDAwMDA4ODg4OEBAQEBAQEBAQEAEDBAQGBgYMCAgMEg4MDhIUEBAQEBQREBAQEBARERAQEBAQEBEQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ/8AAEQgAggB4AwERAAIRAQMRAf/EAKkAAAEFAQEBAQAAAAAAAAAAAAACBQYHCAQDAQkBAQABBQEBAAAAAAAAAAAAAAADAQIEBQcGCBAAAQMDBAECBAMGBQQDAAAAAQIDBBEFBgAhEgcTMUFRIhQIYTIjcYGRQhUWoVJicjPBsiQlJhcYEQABAwIEAwYCCQMDBQAAAAABABECAwQhMRIFQVEGYXGBIjIToRTwkbHB0UJSYiPhchaisjOSwuIkFf/aAAwDAQACEQMRAD8Ak+vjdbRGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiI0RGiJSEhVa6lhEFUKV4xqX2gqOjxjT2gjo8Y09oI6PGNPaCOjxjT2gjo8Y09oI6fk4Fkjn9CQxELr2RhxVqjpIDjnjdUyahVOPzJJFfbfWzG0Vz7TRc1X0jiWLKmoJrutmn2O4v2m7MKjTIqvHIYXTkhQ9jSusKvaSo1DCYIkMwqguuXxjUPtBHR4xp7QR0eMae0EdHjGntBHR4xp7QR0lSQkVGo5wACqvrfvq6lxQpep1ajREaInuy4TluRSYsSz2qRIcmtuPRDwKEOtNK4LWha+KSAr5SQfXb11sbfbrmvKMacCTIEjDMDAkE4Z4d+CoZAKQ5n11C68DC7neG5s9aYsmNbURXg1IaXUuHyqoAlChx3+Ymuyaa2u4bTCxbXUEpeUiOktIHPHkMufYFbGTq5oV9kz488dcdbyha7rATGkLkJj2lj5hICuK1gpUkJfAKq78B+3XQKdzKcZfKWktE4MX00x+bjkfVnxZQtzKbZt27NyzMbLmcXEI053ES+mXEg3eJJKnZCSUhXFbikhJ3SkBW2wOsSpX3C5uqdxGhGRou4jUjLGXiSGzAxVWiAz5pmay/FWSmx9wYs5EkMQ1eEyYgYXIuD77rr7pW0hBQ2orTwCRxQK09ta8X9sP47+iQRHB4tqmZEyLgBgXDNgMexVY8Ck5p0j/AFy22yf1wW5/BoxYjDDbCRNjxQkuzFyUKDYUXHCOLhCyOIHpqm4dOe9ThK0aWGkAAecRzmZDyu5ylizJGbZqmLhYrxao8eXcojkZmWXkxnHE0Dhjr8boT8eKtjrn1W2q04iU4kCTt26Sx+oqd1w6xkU36rx3CMgvK281nSGGWU82ocRvd+nr5H1fI0gbCpp6/mT7+j2W0s69Ui4kQBwiM++WUR9HCskSMleOY9SYLnVncZxG3C13Zv5rS7EajmO4hLPLxPLiOOIUCUf8ijy5KAqfTXR7/YrO8pEUIaJj0aRHSQ2UjAkHL1HFyM8lAJkZrKroKflUKEGhB1xCrkssL4376tpcVUpep1ajRE64zaZ92uiRCtq7siElU6bCQSnlFjfqO8lJ3SCkUqN6nbems6zoTq1PLDXp80h+2OJ7vo2KoSrnnd0wGbewvB7d9Je5o+iRj4jJUbbJb4NVYPi4uNPIJSpkprz+bY+vQKnUMBAG2g1SXl9tv+OQYeXDzRmMDAj1Y4KHRzVl9Y9JmBJGbdlLF4yaStUhLbp8jENTii4QlP5SvkokkDik/l/zH2GzdO6JfMXnnrEvjiIvj3O/gOHNRynwGSknZfYPWGMQ1Qc5XHnrI5Js6mW5byqjb9JVQmo9CriPx1tt33TbreGm5Il+xhI/Vw8WVkYyOSpbEvuRxHHMkmfQ4ki0WOYlpHGB40vJLSnD5FtpShCq+T8oI409Trntj1da0LiWmgIU5N6WfB8SMAc8uHapzTJGavO3XzrbuGxuRmHIt7iKFX4Tyf1mSdqqbXRaCPZQp+B10mlc2G6USAY1I8YnMeGY7/qKgIMSqWzXrbLujJTma9aTHpFjVtc7e4A4tlkqSpQVUGqDxA8iQFo+P82uebjtF1s8jcWciaf5o5sMPhh6g0o/FTRkJYFOeRWW3dv9WO5DBaYhXFDbcpg8GnpSlMhxtMRKWua0NEgoaAPNxYqU/HMu7enum3GrECM2EhkZYONGDkR4R/NI4kc6A6ZLMsqLKgyXYc1lceQwpTbzDqShxC0mhSpKgCCD6g649OEoSMZAgjMHMLJXlqxFs77Y37nI6qiruLy3kJkyEQvISrhHQQkIBPsFBVPhr6C6OlUltsdZfzHT/by+t1h1fUsp9nQGrX2BkkBjZpm4yw2AKUSXlED9wNNcO3ykKd7ViMhOX2lZcMgo037609Liryl6nVqU2246rg0krVQnikEmiRUnb4AV1UAnJFo/Fb1/9adOw8gvL4N3jgm1Wl5IgS0Ick80tAji46yokOrCklKkn5SCNdasrj/5+1Rq1D/IPTA+SQeWX6pRPqk4IIyKxyHknn7csBk3FyV2/l4Mm63V11dtW6N0oWSHHqegKySlPwSNtjrYdJ7ZKoZX9fGcydL/ABl45DkO9W1JcAnvv6/ZqwxFsOK3BmxR3khdwvMqW3CCi6VpajtOuEEKPjUpXHcClSAd9j1Rc3YjGlQkKYPqnKQhm7RBPHAkt2KlMDiqBjdB9s3aDMvItRX4VuBSXJDRekKQoham/mPMVGxr838tdcwh0xudWEqmjIniHLZtjj38eDqf3Ipnf6l7Bj8ErtCy4tmHJ8CVtl1LU99ceOSkKqCtxBFPUbVprAlsd9HOmXaJbB2mTGOHaR4cVdrCe0dJ90Yzercbfa3406SpX0cuHJb/AE1pSVEKdbco3sP5iAfautiOnd2t6sNMCJHIxIw8QcPFW64lak6um5pNx16x9lwvHeICvC+6vxuNzI7gPjcq2Sg1AKVD8N/XXZ9lqXc6Bp3kWqRwOREonI4Ycwe7FYsmfBUVnGMyvt87Og5rYGPJYJ63EobKeXhDoIeYBqCCEnk2ag029jrmu5Wctk3CNxSD0pP4P6o/fH+hU8TriyX3Lg1qyCyK7ibectjExpJS040h5c55Z/QXSKVIZSpugqo12HL5iSbuoNtp16Pz4JgJDkDrJ9J8uEQRz5B8UhJiyoVttbq0tNJK1rIShCRUknYAAe+uZAElgp1+gHXeNDDMGs2OLASuDGQJNKcfOurjx/ZzUrX1FtVn8pZ06RzjHHvzl8XWBIuXWEs0u4v+V3m+INU3CbJko9fyuuqWkCvsAdfMu6V/fuKlT9UyfrJWfEMEzt++tfS4q4pep1arB6OtzNxzuIE3eVaJjFXozsKMZC3G0AqkINK8atBQBKVDf0PofU9OUhUvI/yShIYjSNTgeodnlfge5WTOCsHts3HsjtTHusIklbsdkNKkOEcVJ86fM44UpCU1QwARRCPXce+vU77rv9ypWcSSAz+OJLYDCHYFHDCJK0xHZt9jtaI0ZAYhW5kIQ2gEhtplGwATU7JHprsEYwo02GEYj6gB+Cxs1nnPvuLwjIp7Voh2ybIYgvpft1+iOoZktyUgoC2WXUKCkkKIKV/mB3TrlW59WWdeYpxhIiJeNSJaQlzjEjEYs0s+SyI0yFemCXC+XXD7TcMlh/QXN5hKpcTiW+CvQfId01AB4/y1prpO21a1S1hKtHTMjEZfDh3cMlBJnwWcPuxmXOFncBEaU4zHk21jm22soCy1KeUOXGnLiSCK+h9Ncm64qVIXkWkQDAZdkpfQLIpZK9Ol5F2mdfW2ddb4L/8AUJ5xZviLbiWgAjxOkklS0KSQpR3r8fXXSOnpVZ2MJTqe4+UmYtyPMjiftzUE81LrpMkW+3vTY0Rye4yOQiMFAdcAIqEeRSU1puASK+mt9WqShAyETIjgGc9zsFaFSuS9m4V2Nbbp17m0ZePPutxxGdmjitiYY7j6lqQ4ELSGnG+Gw+fkKbL1zy83i0v6c7W4HtkgNq4S0mTsWI0kaf3OP1KYRIxCqq4dA96TRCtUuD9VEtyFMwVGdGLLLalqcISlTgUAVGv5a+nw28TV6X3iemEovGOEfNFgHfm/wUvuRVo9QfbWjE7kxlGavtTbhGIchW9iqmGXBuHFqUBzUn2AFAd6nans9h6QFtUFa4IlIemIyB5k8T8B2qKdR8App3xnMfCOvp5S5xuF1QuDbkJNFc3U8VuD3AQgk1+NB769D1NuUbSxlj5pjTHxzPgPiyspxcrDjnpr5sq5LOC+N++raXFVKXqdWq5ui7rhVqt7sq83eBbLuzN8sQzoq1K8Xg4FSZDXjWn8ygAHKe5TroHTVa0pwMqlSEKgk41A5M3qDEZn83goagKlXTuPtZ72L2BkQnyG2D5YEK6RnavpRJdUlLjTr3lIV4maA1VQK9fQ63ewWovb66q6i2MYyBx8xzBOr8se1gVbMsAEYp2o10Terr13mttfkpblOSP62y4HpEhDgSGVrQ4UgjxgbhVR6U0sd6GzVZ2lxAlpE6wXlJ20kg/tbjhkyGOoOFYdrudm7BfauuDvRPHLMiQ3IVE/WadhMttpbeSsACjkjl+VRoapPoR6qjWpX0hO2MWLl9OIMAA0n/dN8jhiDyjIIzVX95T+57BeH8ouN4TZrclX0Nnj2+W4gSELB5LDaSSFcd1KVTiaBJ2GvG9SVd2o1TWnU0Q9MBCR83a3PiScsG4KWGk4JossjNe5cL/s52ytTLnHaEqHk7qm/qHW23+JQ646oK+Y8gVgkkjdPqrWBbzu91tPlzTEpgahVLaiBLIk488eeYzKqWiXXf1zkGWdMsXaZm0p1NrsR/pcXHmVtuIkT5VZXEKRVAKEnmte6gFBP+nWTtN1c7VGcriR0U/IKYY6py82eWAxJzxA7FSQEslJo/3hWRTVZWNyG3afkbktuJrT/MUIPr+GtxDr2i3mokHvB+4K32TzUQxNmT3b29IyHFELxFiG19bIkxx9QfqVKAKlcuKObqjvtQpTuCa60VjGW77oatB6IiNRI83m58A8viBkrz5Y44rWLKFtsobdWXVpSAt0gAqIG5IFAK/hrt8QQACXWIuS93u145aZV7vMhMWFDQXH3lnYAew+JJ2AG5Ow1Bc3FOhSlUqFoxDkqoDrDXa/ZNw7Nyl28PhTMFgFm1wyf+JkGtTTbmo7qP7vQDXzfve7z3C5NQ4RGERyH4nj/RZsI6QoU56a81VyUgXxv31bS4qpS9Tq1GiLZv2x46LJ1bGnOJ4vXh96auo34A+Fsfs4t8h/u19A9HWns7cJHOZMvuH2P4rDql5KM/cX1njkjHnL3ZnoUC6QnpVynIkPJRImIfHNwBSiVLUCn9NJ2p8qaemtP1Zs9CVA1KZjGcTKcnLSk+J7ScPKPAclfTkXXF9uMfFbFapjeV3Bu2X23T3SxGdnmKfBJjxlAlCXEJdQsoGygofLrH6ShbUachXmIVYzLAy04SjDg4EgW4vklRzkrNyrA8fz3J4ku63hMhENEdTNkR4VoLQeRJWpQVyUfKW0AqFPkFB6k69je7ZQvbiMp1HEQGhhk4ke3zMMf04cVGJEBeUCTY7T3IjGrb9NDQmwpQzAZCGuCkS1OBCG00A+RRVQD031HSnRpbr7MNMR7WEQw/MSwHcXTHS6b++7NBX14/abbaWZEy6zUiNRASUSnebzj44iqllKFD4mv7tYvU9vA2JhCmDKcsP7i5Mu9gVWmcVVF3+3K0MdVpzu23N9c5u1tXN+MQhTCz4g85xIAUAEVp6768RX6TpDbfmYTOoQEyMGyc/BSip5mVr/AG74kcPxS621+ipSbpKbfe4lClpZCG0VB3GwrT8de36UsflbacD6vckCe5gPp2qKoXKsDJMmsWI2l295FMRCiMjdxw7qVSoShI3Uo02AFdepu7yja0jUqyEYj6Ycz2KMAnJY17i7luvZ9yEdgLh2KKqsKAT8y1enleoaFZ9h6JGw9yfn/f8AqCpuNRh5aQ9Mfvl2/Z8VmQhpVb68kpElz01FVyVQnXD8bnZhkkDGbaUpkXB1LKFr/KgGpUs03olIJOszbLSd1XjRhnIt/XwVJFg6vrNeo+i+q7XF/vGbdJk2YlQZRGU35HC3TmpCOKUJG4HzK/jrqW47Fs+204/MSnKUsmZy2bBmHiVjxnKWSpbKGOvXHEqwV+6q5kJ+kukeNXf4Ox3jU/AeP9+ue3sbEn/1jU7piP2xl/2+KmD8Vu7F7QjH8atViQKC3xY8am3q02lBO3uSNfS1lQFC3hS/TED6gsElyoF3lfcKwnGpN7udmgXC83IGPbkyYjLy3XQgJ5rK0klDaaVr+CffXmOpLm0tLc1J04SqSwi8QXPMuMoj7gpIAkrl6UxfDcp6rx+5XqyQLjJDchpb8qHHecHCU6ONVoJA+A1D07ZWtzttKdSnCRYh5RiT6pdiTJEl72HE7UruXIwLawLZCtVtjMxvC39OguKUsJS3x4igb9vTUltY0/8A6tbyDRGnAAMNIfsy4IT5Qo93r2M51TMtEfDnQm6SCp6VHkKVJZTESClKODiiWwpZ28ZT+U61fUu7HbZUxbnznEg+YaeTHJz+lsldCOrNTzDpbvaeA4/kmQsmDLU8i4NJhrUgIdjPrSgjly+VaRuDXZVPx16Xb5ncrKlWqjTJ9fl5xJbwI4cioz5SwUVznPsE6msr3XF4dmzf6mzOW23EaYWqJGmuOcUHmtsAJ5kIG+w+FNaXct0s9spG0qGUtYl6QPLGZOGJGT4dgV8YmRdeXSebsZqq9xcafciOpVFkT13AIdcccMdMZTrDLfEI5eEFXJxwBXtvvH07uMbv3I0SYnymWtiSdOl4xDM+nF5SY8MUnFkw/ddb4lvw+0c1rlTX54K5kg83ShthyqUkAJQmqhVKAkE70rrW9b0owtaeLyM8zngD4AY5BgrqWay/rjSyUaIkuemoquSqE/de5SvCcxtWUpbLqbe8lbrSdlLaUChxIrtUoUQNbLZ702l1Csz6T8Mj8FSYcMtdZhhuCfcJjcG5Wu6fPF5GFcY1Fqa8oHNt5pXE/wAoPE8VAj9te9X+32e+W8Zwnl6ZDg+YkPuwKwxIwKY8B+17HMRvca/Xi5uXp+EsOxWCwmOwHE7pUtPNwqKTuPmAr611rds6MoWtYVakzUMS4DaQ/biXbvVZVSQrGzbsbEev4CpuST0Mr4kswkELkvH2CGwan9p2Hudes3HdrWyhqrSAPCP5j3D6BRxiTksYdpdk3Ts7Jl3qanwRWR4bdBBqGWa13PupR3Uf+gGvn3et3qbhce5LCIwjHkPxPFZsY6QtGfajeGp3XMi1c6vW2a6lTfuG3kpcSfU7FRV/DXWOiLgTsDDjGR+o4/isaqMVadsDDVxvchfFCjJbC3DQVSiGwoAn4CpOvaUWFSof3D/ZFRFYW7OuN6umfX2XkHkEwynUlt0EFDSVUaSAQPlCKcfiN9fNu8Va1S9qyqvq1HPlw8GZlnRZls/p9tDXV2LpQKAwI6iPxUjkf8Tr6C2EAbdRb9AWHP1FZA7tvDt77VySU6qvglrhoG9AmJSOAK/7P464P1FcGtuVaR4S0/8AT5fuWXANEKXfaneGrf2W5bnaf+0hPsNfHyNFL/8A2tq1veibgQ3AwP54keIaX2AqyqMFYX3foUcYsDgB4iY6Cr2BLVQP8Dr1PXgPy9I/uP2Kyjmssa4sslGiJLnpqKrkqhDKVKVxSCSSAANySdW0Q6qVblo6I7xs8IZDZGHLfI4eQMx5oYmcfWlEKG9N+JNfb1210Ch01vFKHu0wYlshJpfb8PvUBnHJOtitX3NZtjse62q7S3LfJ8iW1me3HdJZcUysKqpLgopJG+s22odQXdAThORiX/MInAkHiDmFQmAKjrHQfbd+fmSfokyXmX3I8p12YyVl5unKqlLqfX11qY9MbnWMjpcgkF5DMeKu9yITJI6g7Bh5bDwmXbCzdLglxyEhbrfieS0hTiil0KKDRKTUVrrXz2G+jcxtpQacn04hiwc45cFXWGdXF0bZ8p6kym541ktqWZN3jxZqPpaSiiNGdcbdXRkq9PIDT1OwAJIGve9N29ztlzOjWgXmIyw83liSCfL3/g5KimRIOFJs5l5dlbfgw5r/AORNNQ3LhA8SW0eGQ2phbclElQ+QpdWptaSTxK0qCVJB1uNyndXIa3H8oETKLNhIGJEhLh5iYyHDUCxAKsiwzVRZR0/3JlOU/wDt7bGFyksOSQ2y/HQgtNugKNQsioU6PU1/hrwt7sO63Nz/ACQjrIJwMcge/nJTCcQFqLrKDJtfX+P2yYkIkRIbLD6QQoBxtPBQqNjuNdm2elKnZUoSzjEA94WLLNZgy3pDsnJ8jyHKrJbW5cKZcJ8hkNyo5c4qkLVxKSsEKFd0+uuNX3Tl/cV6tenAGMpyI80X9R4Pn2LKEwAyjXVFgy5GeR7naYLvLGn0S7zz/S8DDK/1kOFdKKUkKTx9TvtsdanZLW6F4Jwif4jqnwYD1AvzDhs1dMhlqju7B0djYPKtEF5tNxtzgmROStg40j5kKpuOTbnv7lJ12nqLbRf2cqcSNcTqHeBl4g/YsWEmKywz0f2VKsjl/g2sSozIKnUsPsrdHEBRo2FclbEEcQeQIKagjXFo9OX8qJqxg4HIgn6nf6s+DrK1h16450R2VlVli5BZbe27CmBSmHFSWWyQlRQapUoEbpOr7TpncLmlGrTgDGWWIHZzQ1ACoNebZMstzmWa4IDcqA+7FkoBCgl1lZQsAioNCPUa8vd0ZUZypz9USQe8YFSAupL01GjTO0MaYlgKbM5hXFVKFSDzSDX/AFAa23TkIy3GkJZagranpWr8ig5PkHY820WXL3ceUxaoy2oDbKJAebdfdDj4Q6qgUlSUo5gV9tdzu6dxXv5U6dc02pjysJODKTyY8RgHWGGAyXtisOLZerJEC8ZC9DbhzLq1LyJK0MPBaLs+lTnJ0OJSVK2NQfXUllTjR24xqVTERlMGpgD/AMsscXGJQ4yXH1pHfyLr/IYVtvjylyrldWIWQBQcfKA8W2nwpvxhSikA1FAdQbPE17KrGFQ4zmI1Mzmwlg2LdyrLAroveQRLj3djeLNR1iRaIk64PyVookpkshlCUH3HryPxAHx1LcXUam70aABeEZSJ/uDBvvVAPKSpO4u0OSzmrdFOw2pdrr6cimWltSan4Os09Pf+O5JpGXzAziJQ/wBTf7oq3sTVa43g7gyB2g/8i0Wp3b1NJEtvf8fk1hUYad0qnnTgf9Ux9yqfSo9hs23SO35se15I9kLLVpeU4X32XvpXlzUBbSfEhHEAJGxqfx1qtvqQlukhCsaoFM5kHSdYeOAHIK6XpyUmyCfecUxe7XuymPMhQ2pVyb5lSXG0o5SFoA3S4CeQG7fFOwqRrcXVWrbW86lNpRiJT7R+Yjt48YsFaMSo67/dFsz3FJ7rrfjvz8lqRFaKnF/TNwVvI8r5DfPgr0HD0CfVXIq1J+Yp3tCRIaoSCBj5RAkPLB27uA4uTdgxT3PgQbbbew7nbW0JlyA65IICVVW3a2igFNKe9aH1r+OtjVpQp07ucB5i7+FKLfTtVvJQyxWyXdOucVySbcpC5t3kW1uepwMuBxMhaIa6JdbUByYHBVNlj84Ud9eftqMqlhQrSmdUzDVkXciBzHGOB/UPU6vJxIU6btEPrmPeMnMyXKt7EJDsuDTzOLfjl1x2UdwC44kpSqiUj5Kn8PSChCwjUrapGIi5jmSYuTP+6QYHAZY9ljvgmLC50O69KxblJu39rR5in3zcm3WmfpA7cFrCQ48OAqTw3Hv8da3b6kKm0xmZ+yJOdTgaXqHicP2q4+rmscZasOZLd3BLM8KmSVCeVJWZFXVHylSPlPP81Rtvr5+3IvXmdWrzHzfqxOPjmsyOS5LRc5dluUW7W9wsyoTrciM6N+LjSgpJ/cRrFta8qNQVIlpRII7wqkOtFn7vIH9O+p/tql68Pi83lT4eXr68efCu/H/H311z/Pqftv7P8jM74fY7dixvZTNg33PxMYxOPj93sa7pIQ5KelS/qEoS6uVKckk8C2qm7nx1r9t61hb2wpVKZmXkSXzMpGWTdqulScrzV9zUZiw3y1WyyLiyLm/Ikw5KZCeMZbvEo+UNivEpr7at/wAzgKNSEKZBmSQX9L5cOCe1iu9/7occkZTCy5eLvJnQ4kiDVMxNFtvrbcor9H+UoNP9x1ky61tpXMa/snVGJj6uBIP6eDfFU9oszple+5AKxa448zanG3JlzeuTEkSB+k09cvry1ThudymtR61prXy6wHy06QgQZTMwXyBqe42XeFd7WKfm/uttbeTyMi/t10+eGxC8P1Sajwuuu8uXi9/LSlNbIdc0hcGr7RxiIs/IyPLtVvslmXmPunsyMnZyFjGVtBuI/EWymSgFannWneZUGvbx0/fq3/N6AuBVFFmiYs/Mgv6exPaLJrT9yra8EvWHS7Q46u5oujMeX9QB4m7gp1SApPD5vH5KeoqBrCHWMTZ1LeUCdYmAXyE3bhwdV9rF1IU/d7b2ITbbGLqXIYbDbLjktPEHiBXZqtNtwNbX/PqQgAKOIGHm/wDFW+yeah2C/chfMeya9XnJIwusW/uJelxm1eMsuIT40eLkFDiEAI4n1AG+2+g23rCrQuKlSsNcahcjJjkG7GwY8hjzvlScYJxy77lkXy648m0WcwbNZJbE52H5Ehx9Uf8AIgFKeKEpBNBQ7/s1l3/WUa1Sl7cNNOnISbidOQyYBUFJk7f/AKxiLv02fIx9btvmQ48QwFyUmjjTj6lLqW6ELS8EkU/l1nf51TNaUjSJhKIjpfiDJzlxEm8FT2cFErx3fZ5nUr/VtuszsdpRAjTHJCV8G0zRLSlSQ2KkJHGtfx/DWiuOpaM9sNlCmQOBfhr1cvBXimdTqo1qBG2vBTkCMFMEjUCqjREaIjREaIjREaIjREaIjREaIjREaIjREaIv/9k=" width="72" height="78" alt="Tier- und Freizeitpark Germendorf"><div class="brand-text"><h1>Gartenteam<span class="header-dot"></span></h1><p>Gemeinsam den Park gestalten.</p></div></div><div class="header-tag">TEAMLEITER · KEVIN</div></header>
-<main>
+<main id="authMain"><div class="intro"><h2>Willkommen im Team.</h2><p>Melde dich an, um deine Aufgaben zu sehen.</p></div><div class="card"><div class="auth-tabs"><button class="back" type="button" onclick="setAuthMode('login')">Anmelden</button><button class="back" type="button" onclick="setAuthMode('register')">Registrieren</button></div><form id="authForm" onsubmit="submitAuth(event)"><div id="registerName" hidden><label for="authName">Dein Name</label><input id="authName" type="text" maxlength="80" autocomplete="name"></div><label for="authEmail">E-Mail</label><input id="authEmail" type="email" required autocomplete="username"><label for="authPassword">Passwort</label><input id="authPassword" type="password" required minlength="8" autocomplete="current-password"><p id="registerHelp" class="small" hidden>Nach der E-Mail-Bestätigung gibt Kevin deinen Zugang frei.</p><button id="authSubmit" class="primary" type="submit">Anmelden</button></form><button class="text-button" type="button" onclick="requestReset()">Passwort vergessen?</button><div id="authStatus" class="status" role="status" aria-live="polite"></div></div></main>
+<main id="pendingMain" hidden><div class="card"><h2>Dein Zugang wartet auf Freigabe.</h2><p>Kevin ordnet deinen Login einem Teammitglied zu. Danach findest du hier deine Aufgaben.</p><button class="primary" onclick="bootAuth()">Freigabe prüfen</button> <button class="back" onclick="signOut()">Abmelden</button><p id="pendingStatus" class="small"></p></div></main>
+<main id="resetMain" hidden><form class="card" onsubmit="finishReset(event)"><h2>Neues Passwort</h2><label for="newPassword">Passwort (mindestens 8 Zeichen)</label><input id="newPassword" type="password" required minlength="8" autocomplete="new-password"><button class="primary" type="submit">Passwort speichern</button><div id="resetStatus" class="status" role="status"></div></form></main>
+<main id="appMain" hidden><div class="session-bar"><span id="signedInName"></span><button class="text-button" type="button" onclick="signOut()">Abmelden</button></div>
 <section id="home" class="section active">
-<div class="notice">V8 · Dein Team. Dein Park.</div>
+<div class="notice">V9 · Dein Team. Dein Park.</div>
 <div class="intro"><h2>Alles im Blick.</h2><p>Plane Aufgaben und halte dein Team auf Kurs.</p></div><div class="grid">
 <button class="tile" onclick="show('today')"><span class="icon">✅</span><b>Heute</b><span>Aufgaben ansehen & abhaken</span></button>
-<button class="tile" onclick="show('newtask')"><span class="icon">➕</span><b>Neue Aufgabe</b><span>Aufgabe verteilen</span></button>
-<button class="tile" onclick="show('team')"><span class="icon">👥</span><b>Team</b><span>Mitarbeiterübersicht</span></button>
-<button class="tile" onclick="show('areas')"><span class="icon">🌳</span><b>Bereiche</b><span>Gartenbereiche</span></button>
-<button class="tile" onclick="show('issue')"><span class="icon">📸</span><b>Mangel melden</b><span>Problem dokumentieren</span></button>
-<button class="tile" onclick="show('material')"><span class="icon">🧤</span><b>Material</b><span>Bedarf notieren</span></button>
+<button class="tile manager-only" onclick="show('newtask')"><span class="icon">➕</span><b>Neue Aufgabe</b><span>Aufgabe verteilen</span></button>
+<button class="tile manager-only" onclick="show('team')"><span class="icon">👥</span><b>Team</b><span>Mitarbeiterübersicht</span></button>
+<button class="tile manager-only" onclick="show('areas')"><span class="icon">🌳</span><b>Bereiche</b><span>Gartenbereiche</span></button>
+<button class="tile manager-only" onclick="show('issue')"><span class="icon">📸</span><b>Mangel melden</b><span>Problem dokumentieren</span></button>
+<button class="tile manager-only" onclick="show('material')"><span class="icon">🧤</span><b>Material</b><span>Bedarf notieren</span></button>
 </div>
 </section>
 
@@ -74,7 +79,7 @@ nav{background:#fbfcf9f5;backdrop-filter:blur(16px);box-shadow:0 -4px 24px #1438
 </div></section>
 
 <section id="edittask" class="section"><div class="topline"><button class="back" onclick="show('today')">← Zurück</button><b>Aufgabe bearbeiten</b></div><div class="card"><label>Aufgabe</label><input id="editTitle" type="text"><label>Bereich</label><select id="editArea"></select><label>Mitarbeiter</label><select id="editPerson"></select><label>Art</label><select id="editRepeat"><option>Einmalig</option><option>Wiederkehrend</option></select><label>Hinweis</label><textarea id="editNote"></textarea><br><button class="primary" onclick="saveEdit()">Änderungen speichern</button> <button onclick="show('today')">Abbrechen</button></div></section>
-<section id="team" class="section"><div class="topline"><button class="back" onclick="show('home')">← Zurück</button><b>Team</b></div><div id="people" class="people"></div></section>
+<section id="team" class="section"><div class="topline"><button class="back" onclick="show('home')">← Zurück</button><b>Team</b></div><div id="teamStatus" class="status" role="status"></div><div id="approvals"></div><div id="people" class="people"></div></section>
 <section id="areas" class="section"><div class="topline"><button class="back" onclick="show('home')">← Zurück</button><b>Bereiche</b></div><div class="card area-form"><label for="newAreaName">Neuer Bereich</label><div class="input-row"><input id="newAreaName" type="text" maxlength="100" placeholder="z. B. Strand oder Blumeninseln"><button id="addAreaButton" class="primary" type="button" onclick="addArea()">＋ Hinzufügen</button></div><p class="small">Bereiche werden online gespeichert. Beim Löschen bleiben vorhandene Aufgaben erhalten.</p><div id="areaStatus" role="status" aria-live="polite"></div></div><div id="areaList" class="areas"></div></section>
 
 <section id="issue" class="section"><div class="topline"><button class="back" onclick="show('home')">← Zurück</button><b>Mangel melden</b></div><div class="card">
@@ -86,15 +91,15 @@ nav{background:#fbfcf9f5;backdrop-filter:blur(16px);box-shadow:0 -4px 24px #1438
 <button class="primary" onclick="saveNote('Material','matArea','matText')">Bedarf speichern</button></div></section>
 </main>
 
-<nav><div>
+<nav id="appNav" hidden><div>
 <button onclick="show('home')"><i>🏠</i>Start</button>
 <button onclick="show('today')"><i>✅</i>Heute</button>
-<button onclick="show('newtask')"><i>➕</i>Aufgabe</button>
-<button onclick="show('team')"><i>👥</i>Team</button>
+<button class="manager-only" onclick="show('newtask')"><i>➕</i>Aufgabe</button>
+<button class="manager-only" onclick="show('team')"><i>👥</i>Team</button>
 </div></nav>
 
 <script>
-const people=["Kevin (Teamleiter)","Marie","Eileen","Klaus","Werner","Ferienarbeiter 1","Ferienarbeiter 2"];
+let people=["Kevin (Teamleiter)","Marie","Eileen","Klaus","Werner","Ferienarbeiter 1","Ferienarbeiter 2"];
 let areas=["Parkplatz","Kassenbereich","Spielplatz","Koiteich","Außenring vorne","Außenring hinten","Büro / Teich","Hundeplatz / Strand"];
 const defaults=[
 {id:1,title:"Toiletten kontrollieren",area:"Kassenbereich",person:"Kevin (Teamleiter)",repeat:"Wiederkehrend",note:"Kontrolle & Sauberkeit",done:false},
@@ -105,16 +110,20 @@ const defaults=[
 const SUPABASE_URL="https://toddhsdirldwvygpjkea.supabase.co";
 const SUPABASE_KEY="sb_publishable_xLveefGHC3-NIVy4wtTbFg_gEpsljye";
 let tasks=[];
+let session=null;let profile=null;let employees=[];let refreshPromise=null;
 let editingId=null;
 let areaRows=[];
 let areasReady=false;
 let areaBusy=false;
 
 async function db(path, options={}){
+  await ensureSession();
+  if(!session?.access_token)throw new Error("Bitte anmelden.");
   const r=await fetch(SUPABASE_URL+"/rest/v1/"+path,{
     ...options,
     headers:{
       "apikey":SUPABASE_KEY,
+      "Authorization":"Bearer "+session.access_token,
       // Publishable Keys sind keine JWTs und gehören nicht in den Bearer-Header.
 
       "Content-Type":"application/json",
@@ -134,10 +143,13 @@ async function loadTasks(){
 }
 
 function show(id){
+  if(!profile||profile.rolle==='pending')return;
+  if(profile.rolle!=='teamleiter'&&!['home','today'].includes(id))return;
   document.querySelectorAll(".section").forEach(x=>x.classList.remove("active"));
   document.getElementById(id).classList.add("active");
   if(id==="today") loadTasks();
   if(id==="areas") loadAreas();
+  if(id==="team") loadTeam();
   scrollTo(0,0);
 }
 
@@ -190,7 +202,7 @@ function renderTasks(){
  const el=document.getElementById("tasks");
  el.innerHTML=tasks.length?tasks.map(t=>{
    const id=taskId(t), canToggle=id!=null && !!idColumnFor(t);
-   return `<div class="task ${isDone(t)?"done":""}"><input type="checkbox" ${isDone(t)?"checked":""} ${canToggle?`onchange="toggle(${tasks.indexOf(t)},this.checked)"`:'disabled'}><div><div class="tasktitle">${esc(t.titel||"")}</div><div class="meta">📍 ${esc(parseDescription(t).area)} · 👤 ${esc(parseDescription(t).person)}</div>${t.beschreibung?`<div class="meta">${esc(t.beschreibung)}</div>`:""}<span class="badge">${esc(t.art||"Einmalig")}</span><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button type="button" onclick="openEditByIndex(${tasks.indexOf(t)})">✏️ Bearbeiten</button><button type="button" onclick="deleteByIndex(${tasks.indexOf(t)})">🗑️ Löschen</button></div></div></div>`
+   return `<div class="task ${isDone(t)?"done":""}"><input type="checkbox" ${isDone(t)?"checked":""} ${canToggle?`onchange="toggle(${tasks.indexOf(t)},this.checked)"`:'disabled'}><div><div class="tasktitle">${esc(t.titel||"")}</div><div class="meta">📍 ${esc(parseDescription(t).area)} · 👤 ${esc(parseDescription(t).person)}</div>${parseDescription(t).note?`<div class="meta">${esc(parseDescription(t).note)}</div>`:""}<span class="badge">${esc(t.art||"Einmalig")}</span>${isManager()?`<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button type="button" onclick="openEditByIndex(${tasks.indexOf(t)})">✏️ Bearbeiten</button><button type="button" onclick="deleteByIndex(${tasks.indexOf(t)})">🗑️ Löschen</button></div>`:""}</div></div>`
  }).join(""):`<div class="card">Noch keine Aufgaben vorhanden.</div>`;
  document.getElementById("counter").textContent=`${tasks.filter(isDone).length}/${tasks.length} erledigt`;
 }
@@ -201,7 +213,7 @@ function parseDescription(t){
  const parts=String(t.beschreibung||"").split(" | ");
  const a=parts.find(x=>x.startsWith("Bereich (noch nicht zugeordnet): "));
  const p=parts.find(x=>x.startsWith("Mitarbeiter (noch nicht zugeordnet): "));
- return {area:a?.split(": ").slice(1).join(": ")||areas[0],person:p?.split(": ").slice(1).join(": ")||people[0],note:parts.filter(x=>x!==a&&x!==p).join(" | ")};
+ return {area:areaRows.find(x=>String(x.id)===String(t.bereich_id))?.name||a?.split(": ").slice(1).join(": ")||"Nicht zugeordnet",person:employees.find(x=>String(x.id)===String(t.mitarbeiter_id))?.displayName||p?.split(": ").slice(1).join(": ")||"Nicht zugeordnet",note:parts.filter(x=>x!==a&&x!==p).join(" | ")};
 }
 function openEditByIndex(i){
  const t=tasks[i];if(!t)return;
@@ -220,7 +232,7 @@ async function saveEdit(){
  const title=document.getElementById("editTitle").value.trim();if(!title){alert("Bitte eine Aufgabe eingeben.");return}
  const area=document.getElementById("editArea").value,person=document.getElementById("editPerson").value,note=document.getElementById("editNote").value.trim();
  const description=[note,"Bereich (noch nicht zugeordnet): "+area,"Mitarbeiter (noch nicht zugeordnet): "+person].filter(Boolean).join(" | ");
- try{const changed=await db(taskFilter(t),{method:"PATCH",headers:{"Prefer":"return=representation"},body:JSON.stringify({titel:title,beschreibung:description,art:document.getElementById("editRepeat").value})});if(!Array.isArray(changed)||changed.length!==1)throw new Error("Keine Aufgabe geändert. Bitte Datenbankrechte prüfen.");editingId=null;show("today");}
+ try{const changed=await db(taskFilter(t),{method:"PATCH",headers:{"Prefer":"return=representation"},body:JSON.stringify({titel:title,beschreibung:description,art:document.getElementById("editRepeat").value,bereich_id:areaRows.find(x=>x.name===area)?.id??t.bereich_id,mitarbeiter_id:employees.find(x=>x.displayName===person)?.id??t.mitarbeiter_id})});if(!Array.isArray(changed)||changed.length!==1)throw new Error("Keine Aufgabe geändert. Bitte Datenbankrechte prüfen.");editingId=null;show("today");}
  catch(e){alert("Bearbeiten fehlgeschlagen: "+e.message)}
 }
 async function deleteByIndex(i){
@@ -234,8 +246,7 @@ async function deleteByIndex(i){
 async function toggle(i,done){
  const t=tasks[i];if(!t)return;
  try{
-   const updated=await db(taskFilter(t),{method:"PATCH",headers:{"Prefer":"return=representation"},body:JSON.stringify({erledigt:done})});
-   if(!Array.isArray(updated)||updated.length!==1)throw new Error("Keine Aufgabe aktualisiert. Bitte Datenbankrechte prüfen.");
+   await db("rpc/gt_complete_task",{method:"POST",body:JSON.stringify({task_id:taskId(t),completed:done})});
    await loadTasks();
  }catch(e){alert("Änderung konnte nicht gespeichert werden. "+e.message);await loadTasks()}
 }
@@ -249,11 +260,12 @@ async function addTask(){
  const note=document.getElementById("note").value.trim();
  // Ohne bestätigte Fremdschlüssel-IDs keine erfundenen Zuordnungen speichern.
  const description=[note,"Bereich (noch nicht zugeordnet): "+area,"Mitarbeiter (noch nicht zugeordnet): "+person].filter(Boolean).join(" | ");
- const row={titel:title,beschreibung:description,art:document.getElementById("repeat").value,erledigt:false,datum:new Date().toLocaleDateString("sv-SE")};
+ const employee=employees.find(x=>x.displayName===person),selectedArea=areaRows.find(x=>x.name===area);if(!employee||!selectedArea){alert("Bitte einen aktiven Mitarbeiter und Bereich auswählen.");return;}
+ const row={titel:title,beschreibung:description,art:document.getElementById("repeat").value,erledigt:false,datum:new Date().toLocaleDateString("sv-SE"),mitarbeiter_id:employee.id,bereich_id:selectedArea.id};
  try{
   await db("aufgaben",{method:"POST",headers:{"Prefer":"return=minimal"},body:JSON.stringify(row)});
   document.getElementById("title").value="";document.getElementById("note").value="";
-  alert("Aufgabe gespeichert. Bereich und Mitarbeiter stehen vorläufig in der Beschreibung, bis die IDs zugeordnet sind.");
+  alert("Aufgabe gespeichert und dem Mitarbeiter zugewiesen.");
   show("today");
  }catch(e){alert("Fehler beim Speichern: "+e.message)}
 }
@@ -261,11 +273,76 @@ function saveNote(kind,areaId,textId){
  let text=document.getElementById(textId).value.trim();if(!text){alert("Bitte eine Beschreibung eingeben.");return}
  let notes=JSON.parse(localStorage.getItem("gt_notes")||"[]");notes.unshift({kind,area:document.getElementById(areaId).value,text,date:new Date().toLocaleString("de-DE")});localStorage.setItem("gt_notes",JSON.stringify(notes));document.getElementById(textId).value="";alert(kind+" wurde nur auf diesem Gerät gespeichert (nicht online synchronisiert).");
 }
-loadTasks();
-loadAreas();
 </script>
 <script>
 // Kein Service-Worker-Cache in dieser Testversion, damit Änderungen sichtbar werden.
 if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister()));
+</script>
+<script>
+let authMode='login';
+const SESSION_KEY='gt_auth_v9';
+const APP_URL='https://creative-gaufre-2c29d2.netlify.app/';
+function isManager(){return profile?.rolle==='teamleiter';}
+function setAuthMode(mode){authMode=mode;document.getElementById('registerName').hidden=mode!=='register';document.getElementById('registerHelp').hidden=mode!=='register';document.getElementById('authName').required=mode==='register';document.getElementById('authPassword').autocomplete=mode==='register'?'new-password':'current-password';document.getElementById('authSubmit').textContent=mode==='register'?'Registrieren':'Anmelden';authMessage('');}
+function authMessage(text,error=false){const el=document.getElementById('authStatus');el.textContent=text;el.className=error?'status error':'status';}
+function storeSession(data){session={access_token:data.access_token,refresh_token:data.refresh_token,expires_at:data.expires_at||Math.floor(Date.now()/1000)+(data.expires_in||3600),user:data.user||session?.user};localStorage.setItem(SESSION_KEY,JSON.stringify(session));}
+async function authRequest(path,body,method='POST',token=null){
+ const r=await fetch(SUPABASE_URL+'/auth/v1/'+path,{method,headers:{apikey:SUPABASE_KEY,'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{})},...(body?{body:JSON.stringify(body)}:{})});const txt=await r.text();let data={};try{data=txt?JSON.parse(txt):{};}catch(_){throw new Error('Der Anmeldedienst antwortet nicht korrekt.');}if(!r.ok)throw new Error(data.msg||data.error_description||data.message||'Anmeldung fehlgeschlagen.');return data;
+}
+async function ensureSession(){
+ if(!session)throw new Error('Bitte anmelden.');
+ if(session.expires_at>Date.now()/1000+60)return;
+ if(!refreshPromise)refreshPromise=authRequest('token?grant_type=refresh_token',{refresh_token:session.refresh_token}).then(storeSession).catch(e=>{session=null;profile=null;localStorage.removeItem(SESSION_KEY);showAuthOnly();throw new Error('Deine Sitzung ist abgelaufen. Bitte erneut anmelden.');}).finally(()=>refreshPromise=null);
+ await refreshPromise;
+}
+function showAuthOnly(){['appMain','appNav','pendingMain','resetMain'].forEach(id=>document.getElementById(id).hidden=true);document.getElementById('authMain').hidden=false;document.body.classList.remove('employee-view');document.getElementById('tasks').innerHTML='';tasks=[];}
+async function submitAuth(event){
+ event.preventDefault();const button=document.getElementById('authSubmit');if(button.disabled)return;button.disabled=true;authMessage('Bitte warten …');
+ const email=document.getElementById('authEmail').value.trim(),password=document.getElementById('authPassword').value;
+ try{
+ if(authMode==='register'){
+ const data=await authRequest('signup',{email,password,data:{name:document.getElementById('authName').value.trim()}},'POST');
+ if(data.access_token){storeSession(data);await bootAuth();}else authMessage('Bitte bestätige die E-Mail von Supabase. Danach kannst du dich anmelden. Kevin gibt deinen Zugang frei.');
+ }else {const data=await authRequest('token?grant_type=password',{email,password});storeSession(data);await bootAuth();}
+ document.getElementById('authPassword').value='';
+ }catch(e){authMessage(e.message,true);}finally{button.disabled=false;}
+}
+async function bootAuth(){
+ try{
+ if(!session){try{session=JSON.parse(localStorage.getItem(SESSION_KEY)||'null');}catch(_){localStorage.removeItem(SESSION_KEY);}}
+ if(!session){showAuthOnly();return;}
+ await ensureSession();
+ const profiles=await db('gt_profiles?select=user_id,email,name,rolle,mitarbeiter_id');
+ profile=profiles.find(p=>p.user_id===session.user?.id);
+ if(!profile){showAuthOnly();authMessage('Die Login-Einrichtung fehlt noch. Bitte Kevin informieren.',true);return;}
+ document.getElementById('authMain').hidden=true;document.getElementById('resetMain').hidden=true;
+ if(profile.rolle==='pending'){document.getElementById('appMain').hidden=true;document.getElementById('appNav').hidden=true;document.getElementById('pendingMain').hidden=false;document.getElementById('pendingStatus').textContent=profile.email;return;}
+ const team=await db('mitarbeiter?select=id,name,rolle,aktiv&aktiv=eq.true&order=id.asc');
+ employees=team.map(m=>({...m,displayName:m.rolle==='Teamleiter'?m.name+' (Teamleiter)':m.name}));people=employees.map(m=>m.displayName);
+ if(!isManager()&&!employees.some(m=>m.id===profile.mitarbeiter_id)){showAuthOnly();authMessage('Dein Mitarbeiterzugang ist nicht aktiv. Bitte Kevin informieren.',true);return;}
+ ['person','editPerson'].forEach(id=>fillSelect(id,people));
+ document.body.classList.toggle('employee-view',!isManager());
+ document.getElementById('signedInName').textContent=(profile.name||employees.find(m=>m.id===profile.mitarbeiter_id)?.name||profile.email)+(isManager()?' · Teamleiter':' · Mitarbeiter');
+ document.getElementById('pendingMain').hidden=true;document.getElementById('appMain').hidden=false;document.getElementById('appNav').hidden=false;
+ document.querySelector('header .header-tag').textContent=isManager()?'TEAMLEITER · KEVIN':'DEINE AUFGABEN';
+ const areaOk=await loadAreas();if(!areaOk)throw new Error('Bereiche konnten nicht geladen werden.');
+ await loadTasks();show(isManager()?'home':'today');
+ }catch(e){if(!profile){showAuthOnly();authMessage('Login konnte nicht geladen werden: '+e.message,true);}else if(profile.rolle==='pending'){document.getElementById('pendingStatus').textContent=e.message;}else{document.getElementById('tasks').innerHTML='<div class="notice">'+esc(e.message)+'</div>';}}
+}
+async function signOut(){const token=session?.access_token;session=null;profile=null;employees=[];localStorage.removeItem(SESSION_KEY);showAuthOnly();authMessage('Du bist abgemeldet.');if(token)try{await authRequest('logout',null,'POST',token);}catch(_){} }
+async function loadTeam(){
+ if(!isManager())return;
+ try{const profiles=await db('gt_profiles?select=user_id,email,name,rolle,mitarbeiter_id&order=created_at.asc');
+ document.getElementById('people').innerHTML=employees.map(m=>{const p=profiles.find(p=>p.mitarbeiter_id===m.id);return '<div class="person"><b>'+esc(m.displayName)+'</b><span class="small">'+(p?'Login freigegeben · '+esc(p.email):'Noch kein persönlicher Login')+'</span></div>';}).join('');
+ const pending=profiles.filter(p=>p.rolle==='pending');const used=new Set(profiles.filter(p=>p.rolle!=='pending').map(p=>p.mitarbeiter_id));
+ document.getElementById('approvals').innerHTML=pending.length?'<h3>Neue Registrierungen</h3>'+pending.map(p=>'<div class="approval"><b>'+esc(p.name||'Teammitglied')+'</b><p>'+esc(p.email)+'</p><label for="approve-'+p.user_id+'">Teammitglied zuordnen</label><select id="approve-'+p.user_id+'"><option value="">Bitte auswählen</option>'+employees.filter(m=>!used.has(m.id)).map(m=>'<option value="'+m.id+'">'+esc(m.displayName)+'</option>').join('')+'</select><button class="primary" onclick="approveUser(\''+p.user_id+'\',this)">Zugang freigeben</button></div>').join(''):'<div class="notice">Keine offenen Registrierungen.</div>';
+ }catch(e){document.getElementById('teamStatus').textContent=e.message;}
+}
+async function approveUser(id,button){if(!isManager()||button.disabled)return;const value=document.getElementById('approve-'+id).value;if(!value){document.getElementById('teamStatus').textContent='Bitte ein Teammitglied auswählen.';return;}button.disabled=true;try{await db('rpc/gt_approve_user',{method:'POST',body:JSON.stringify({profile_user_id:id,employee_id:Number(value)})});document.getElementById('teamStatus').textContent='Zugang freigegeben.';await loadTeam();}catch(e){document.getElementById('teamStatus').textContent='Freigabe fehlgeschlagen: '+e.message;}finally{button.disabled=false;}}
+async function requestReset(){const email=document.getElementById('authEmail').value.trim();if(!email){authMessage('Bitte zuerst deine E-Mail-Adresse eingeben.',true);return;}try{await authRequest('recover?redirect_to='+encodeURIComponent(APP_URL),{email});authMessage('Wenn die Adresse registriert ist, erhältst du eine E-Mail zum Zurücksetzen.');}catch(e){authMessage(e.message,true);}}
+async function finishReset(event){event.preventDefault();const password=document.getElementById('newPassword').value;try{await ensureSession();await authRequest('user',{password},'PUT',session.access_token);document.getElementById('newPassword').value='';await bootAuth();}catch(e){document.getElementById('resetStatus').textContent=e.message;}}
+async function initAuth(){const hash=new URLSearchParams(location.hash.slice(1));if(hash.has('access_token')&&hash.has('refresh_token')){const token=hash.get('access_token'),refresh=hash.get('refresh_token');try{const user=await authRequest('user',null,'GET',token);storeSession({access_token:token,refresh_token:refresh,expires_in:Number(hash.get('expires_in'))||3600,user});history.replaceState(null,'',location.pathname+location.search);if(hash.get('type')==='recovery'){document.getElementById('authMain').hidden=true;document.getElementById('resetMain').hidden=false;return;}}catch(e){history.replaceState(null,'',location.pathname+location.search);authMessage('Bestätigungslink ungültig oder abgelaufen.',true);return;}}await bootAuth();}
+initAuth();
+
 </script>
 </body></html>
